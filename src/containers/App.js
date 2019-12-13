@@ -1,17 +1,17 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import classes from "./App.css";
-import Persons from "../components/Persons/Persons";
-import Cockpit from "../components/Cockpit/Cockpit";
+import classes from './App.css';
+import Persons from '../components/Persons/Persons';
+import Cockpit from '../components/Cockpit/Cockpit';
 
 class App extends Component {
   state = {
     persons: [
-      { id: 1, name: "Christian", age: 26 },
-      { id: 2, name: "Kurisutian", age: 25 },
-      { id: 3, name: "Shurikit", age: 24 }
+      { id: 1, name: 'Christian', age: 26 },
+      { id: 2, name: 'Kurisutian', age: 25 },
+      { id: 3, name: 'Shurikit', age: 24 }
     ],
-    otherState: "Some other value",
+    otherState: 'Some other value',
     showPerons: false
   };
 
@@ -53,17 +53,16 @@ class App extends Component {
     let persons = null;
 
     if (this.state.showPerons) {
-      persons = (
+      persons = 
         <Persons
           persons={this.state.persons}
           clicked={this.deletePersonHandler}
           changed={this.nameChangeHandler}
         />
-      );
     }
 
     return (
-      <div className={classes.App}>
+      <div className={'App'}>
         <Cockpit
           title={this.props.appTitle}
           showPerons={this.state.showPerons}
